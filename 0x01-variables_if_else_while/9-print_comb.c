@@ -9,17 +9,17 @@
  */
 
 int main(void)
-{	char ch1 = '0', ch2 = 'a';
-	while (ch1 <= 57)
+{
+	for (int i = 0; i <= 9; i++)
 	{
-	putchar(ch1);
-	ch1++;
+		for (int j = 0; j <= 9; j++)
+		{
+			putchar('0' + i);
+			putchar(',');
+			putchar(' ');
+			putchar('0' + j);
+			putchar('\n');
+		}
 	}
-	while (ch2 <= 'f')
-	{
-	putchar(ch2);
-	ch2++;
-	}
-	putchar('\n');
 	return (0);
 }
