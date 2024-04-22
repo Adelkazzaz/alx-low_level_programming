@@ -1,27 +1,27 @@
 #include "lists.h"
 
 /**
-* print_dlistint - number of the elements of a dlistint_t list
-* @h: pointer to head of the dlistint_t list
-* Return: number of nodes of dlistint_t list
-*/
+ * dlistint_len - prints all the elements of a dlistint_t list
+ * @h: pointer to head of the dlistint_t list
+ * Return: number of nodes of dlistint_t list
+ */
 
 size_t dlistint_len(const dlistint_t *h)
 {
-	size_t size = 0;
+	size_t num_of_nodes = 0;
 	dlistint_t *i;
 
 	if (!h)
-		return (size);
+		return (num_of_nodes);
 
-	size++;
+	num_of_nodes++;
 	i = h->next;
 
 	while (i != NULL)
 	{
-		size++;
+		num_of_nodes++;
 		i = i->next;
 	}
 
-	return (size);
+	return (num_of_nodes);
 }
